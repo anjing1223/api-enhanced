@@ -49,3 +49,5 @@
 - **`docs:check` 校验的是 `public/docs/home.md`（docsify 站点）**，不是 README；脚本默认只处理该文件，换行会被统一为 `\n`、连续空行压缩到 2 行，PR 改动它后记得跑 `pnpm docs:format`。
 - **ESLint 9 flat config**：`eslint.config.js`，风格由 `eslint-plugin-prettier` 强制（2 空格缩进、单引号、分号、`endOfLine: auto`），并 `globalIgnores(['**/public/'])`——`public/` 下的前端页面不参与 lint。
 - **`pnpm-workspace.yaml` 是单包工作区**（`packages: ['.']`），并带 `allowBuilds`（core-js/es5-ext）与 `minimumReleaseAgeExclude` 白名单；改依赖安装行为时先看它。
+
+<!-- enable general unblock false, trigger redeploy -->
